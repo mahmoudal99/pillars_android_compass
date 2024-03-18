@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-class CompassEvent {
+class AndroidCompassEvent {
   // The heading, in degrees, of the device around its Z
   // axis, or where the top of the device is pointing.
   final double? heading;
@@ -18,7 +18,7 @@ class CompassEvent {
   // or less than the value here.
   final double? accuracy;
 
-  CompassEvent.fromList(List<double>? data)
+  AndroidCompassEvent.fromList(List<double>? data)
       : heading = data?[0] ?? null,
         headingForCameraMode = data?[1] ?? null,
         accuracy = (data == null) || (data[2] == -1) ? null : data[2];
@@ -42,16 +42,16 @@ class PillarsAndroidCompass {
 
   static const EventChannel _compassChannel =
       const EventChannel('hemanthraj/flutter_compass');
-  static Stream<CompassEvent>? _stream;
+  static Stream<AndroidCompassEvent>? _stream;
 
   /// Provides a [Stream] of compass events that can be listened to.
-  static Stream<CompassEvent>? get events {
+  static Stream<AndroidCompassEvent>? get events {
     if (kIsWeb) {
       return Stream.empty();
     }
     _stream ??= _compassChannel
         .receiveBroadcastStream()
-        .map((dynamic data) => CompassEvent.fromList(data?.cast<double>()));
+        .map((dynamic data) => AndroidCompassEvent.fromList(data?.cast<double>()));
     return _stream;
   }
 }
