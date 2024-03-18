@@ -29,16 +29,16 @@ class CompassEvent {
   }
 }
 
-/// [FlutterCompass] is a singleton class that provides assess to compass events
+/// [PillarsAndroidCompass] is a singleton class that provides assess to compass events
 /// The heading varies from 0-360, 0 being north.
-class FlutterCompass {
-  static final FlutterCompass _instance = FlutterCompass._();
+class PillarsAndroidCompass {
+  static final PillarsAndroidCompass _instance = PillarsAndroidCompass._();
 
-  factory FlutterCompass() {
+  factory PillarsAndroidCompass() {
     return _instance;
   }
 
-  FlutterCompass._();
+  PillarsAndroidCompass._();
 
   static const EventChannel _compassChannel =
       const EventChannel('hemanthraj/flutter_compass');
