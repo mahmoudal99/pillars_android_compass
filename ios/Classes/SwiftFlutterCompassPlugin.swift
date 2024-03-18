@@ -23,7 +23,7 @@ public class SwiftFlutterCompassPlugin: NSObject, FlutterPlugin, FlutterStreamHa
 
 
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterEventChannel.init(name: "hemanthraj/flutter_compass", binaryMessenger: registrar.messenger())
+    let channel = FlutterEventChannel.init(name: "mahmoudal99/pillars_android_compass", binaryMessenger: registrar.messenger())
     _ = SwiftFlutterCompassPlugin(channel: channel);
   }
 

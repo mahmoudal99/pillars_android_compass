@@ -1,8 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_compass/flutter_compass.dart';
-import 'package:permission_handler/permission_handler.dart';
+import 'package:pillars_android_compass/pillars_android_compass.dart';
 
 void main() => runApp(MyApp());
 
