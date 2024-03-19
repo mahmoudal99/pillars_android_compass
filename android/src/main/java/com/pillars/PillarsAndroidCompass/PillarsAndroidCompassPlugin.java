@@ -61,7 +61,7 @@ public final class PillarsAndroidCompassPlugin implements FlutterPlugin, StreamH
     @Nullable
     private EventChannel channel;
 
-    public FlutterCompassPlugin() {
+    public PillarsAndroidCompassPlugin() {
         // no-op
     }
 
