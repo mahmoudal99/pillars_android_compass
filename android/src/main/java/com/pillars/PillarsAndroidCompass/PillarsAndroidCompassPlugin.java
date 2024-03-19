@@ -1,4 +1,4 @@
-package com.hemanthraj.fluttercompass;
+package com.pillars.PillarsAndroidCompass;
 
 import android.content.Context;
 import android.hardware.Sensor;
@@ -19,7 +19,7 @@ import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.EventChannel.EventSink;
 import io.flutter.plugin.common.EventChannel.StreamHandler;
 
-public final class FlutterCompassPlugin implements FlutterPlugin, StreamHandler {
+public final class PillarsAndroidCompassPlugin implements FlutterPlugin, StreamHandler {
     private static final String TAG = "FlutterCompass";
     // The rate sensor events will be delivered at. As the Android documentation
     // states, this is only a hint to the system and the events might actually be

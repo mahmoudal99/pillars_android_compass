@@ -19,10 +19,10 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.hemanthraj.fluttercompass
-        pluginClass: FlutterCompassPlugin
+        package: com.pillars.PillarsAndroidCompass
+        pluginClass: PillarsAndroidCompassPlugin
       ios:
-        pluginClass: FlutterCompassPlugin
+        pluginClass: PillarsAndroidCompassPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

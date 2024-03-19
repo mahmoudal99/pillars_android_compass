@@ -1,4 +1,4 @@
-group 'com.hemanthraj.fluttercompass'
+group 'com.pillars.PillarsAndroidCompass'
 version '1.0-SNAPSHOT'
 
 buildscript {
