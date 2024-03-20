@@ -21,8 +21,6 @@ flutter:
       android:
         package: com.pillars.PillarsAndroidCompass
         pluginClass: PillarsAndroidCompassPlugin
-      ios:
-        pluginClass: PillarsAndroidCompassPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
