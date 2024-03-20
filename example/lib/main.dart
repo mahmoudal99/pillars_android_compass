@@ -1,6 +1,7 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:pillars_android_compass/pillars_android_compass.dart';
 
 void main() => runApp(MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   bool _hasPermissions = false;
-  CompassEvent? _lastRead;
+  AndroidCompassEvent? _lastRead;
   DateTime? _lastReadAt;
 
   @override
@@ -58,7 +59,7 @@ class _MyAppState extends State<MyApp> {
           ElevatedButton(
             child: Text('Read Value'),
             onPressed: () async {
-              final CompassEvent tmp = await FlutterCompass.events!.first;
+              final AndroidCompassEvent tmp = await PillarsAndroidCompass.events!.first;
               setState(() {
                 _lastRead = tmp;
                 _lastReadAt = DateTime.now();
@@ -89,8 +90,8 @@ class _MyAppState extends State<MyApp> {
   }
 
   Widget _buildCompass() {
-    return StreamBuilder<CompassEvent>(
-      stream: FlutterCompass.events,
+    return StreamBuilder<AndroidCompassEvent>(
+      stream: PillarsAndroidCompass.events,
       builder: (context, snapshot) {
         if (snapshot.hasError) {
           return Text('Error reading heading: ${snapshot.error}');
