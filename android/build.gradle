@@ -4,7 +4,7 @@ version '1.0-SNAPSHOT'
 buildscript {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 
     dependencies {
@@ -15,7 +15,7 @@ buildscript {
 rootProject.allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
@@ -23,8 +23,13 @@ apply plugin: 'com.android.library'
 
 android {
     namespace "com.pillars.PillarsAndroidCompass"
-    compileSdkVersion 30
-    defaultConfig {
+    compileSdkVersion 34
+
+    if (project.android.hasProperty("namespace")) {
+        namespace 'com.pillars.PillarsAndroidCompass'
+    }
+
+defaultConfig {
         minSdkVersion 20
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
