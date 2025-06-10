@@ -23,7 +23,7 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 30
-
+    namespace "com.pillars.PillarsAndroidCompass"
     defaultConfig {
         minSdkVersion 20
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
